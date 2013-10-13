@@ -17,7 +17,7 @@
 	],
     "autoload": {
         "psr-0": {
-			"Canteen\\HTML5" : "src/"
+			"Canteen\\HTML5\\" : "src/"
 		},
 		"files": ["src/Canteen/HTML5/html.php"]
     },
