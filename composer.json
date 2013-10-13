@@ -16,10 +16,8 @@
         }
 	],
     "autoload": {
-        "psr-0": {
-			"Canteen" : "src"
-		},
-		"files": ["src/html.php"]
+        "psr-0": {"Canteen": "src/"},
+		"files": ["src/Canteen/HTML5/html.php"]
     },
 	"require": {
 		"php": ">=5.3.0"
