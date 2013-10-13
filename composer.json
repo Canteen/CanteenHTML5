@@ -17,7 +17,7 @@
 	],
     "autoload": {
         "psr-0": {"Canteen": "src/"},
-		"files": ["src/Canteen/HTML5/html.php"]
+		"files": ["src/html.php"]
     },
 	"require": {
 		"php": ">=5.3.0"
@@ -28,8 +28,5 @@
 			"type": "vcs",
 			"url": "https://github.com/Canteen/CanteenHTML5"
 		}
-	],
-	"archive":{
-        "exclude": ["/docs/"]
-    }
+	]
 }
