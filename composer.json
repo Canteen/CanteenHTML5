@@ -1,5 +1,5 @@
 {
-    "name": "Canteen/HTML5",
+    "name": "canteen/html5",
 	"description" : "Create dynamic, valid HTML5 markup with a simple an intuitive PHP API",
 	"version" : "1.0.0",
     "type": "library",

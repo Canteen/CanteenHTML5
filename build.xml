@@ -8,7 +8,7 @@
 		<copy file="${docs.config}" tofile="temp.json" overwrite="true" />
 		<replaceregexp file="temp.json" match="\$\{docs\.description\}" replace="${docs.description}" flags="g" />
 		<replaceregexp file="temp.json" match="\$\{docs\.name\}" replace="${docs.name}" flags="g" />
-		<replaceregexp file="temp.json" match="\$\{docs\.version\}" replace="${docs.version}" flags="g" />
+		<replaceregexp file="temp.json" match="\$\{version\}" replace="${version}" flags="g" />
 		<replaceregexp file="temp.json" match="\$\{docs\.outdir\}" replace="${docs.outdir}" flags="g" />
 		<replaceregexp file="temp.json" match="\$\{docs\.logo\}" replace="${docs.logo}" flags="g" />
 		<replaceregexp file="temp.json" match="\$\{docs\.helpers\}" replace="${docs.helpers}" flags="g" />
