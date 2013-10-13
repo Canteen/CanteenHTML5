@@ -19,7 +19,7 @@
         "psr-0": {
 			"Canteen\\HTML5\\" : "src/"
 		},
-		"files": ["src/Canteen/HTML5/html.php"]
+		"files": ["src/html.php"]
     },
 	"minimum-stability": "stable",
 	"repositories": [
