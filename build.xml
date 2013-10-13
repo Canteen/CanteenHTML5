@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<project name="CanteenHTML5" default="docs" basedir="./">
+	
+	<property file="${os.name}.build.properties"/>
+	<property file="build.properties"/>
+	
+	<target name="docs" description="Use YUIDoc to build the documentation for this library.">		
+		<copy file="${docs.config}" tofile="temp.json" overwrite="true" />
+		<replaceregexp file="temp.json" match="\$\{docs\.description\}" replace="${docs.description}" flags="g" />
+		<replaceregexp file="temp.json" match="\$\{docs\.name\}" replace="${docs.name}" flags="g" />
+		<replaceregexp file="temp.json" match="\$\{docs\.version\}" replace="${docs.version}" flags="g" />
+		<replaceregexp file="temp.json" match="\$\{docs\.outdir\}" replace="${docs.outdir}" flags="g" />
+		<replaceregexp file="temp.json" match="\$\{docs\.logo\}" replace="${docs.logo}" flags="g" />
+		<replaceregexp file="temp.json" match="\$\{docs\.helpers\}" replace="${docs.helpers}" flags="g" />
+		<replaceregexp file="temp.json" match="\$\{docs\.themedir\}" replace="${docs.themedir}" flags="g" />
+		<exec executable="${docs}">
+			<arg line="${source.dir}" />
+			<arg line="--extension .php" />
+			<arg line="--no-code" />
+			<arg line="--quiet" />
+			<arg line="--config temp.json" />
+		</exec>
+		<delete file="temp.json" />
+	</target>
+	
+	<target name="clean" description="Remove all the YUIDocs">
+		<delete includeemptydirs="true">
+			<fileset dir="${docs.outdir}" includes="**/*" />
+		</delete>
+	</target>
+	
+</project>

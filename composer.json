@@ -1,0 +1,31 @@
+{
+    "name": "Canteen/HTML5",
+	"description" : "Create dynamic, valid HTML5 markup with a simple an intuitive PHP API",
+	"version" : "1.0.0",
+    "type": "library",
+	"keywords": ["html5", "markup", "document", "html", "tags"],
+    "license": "MIT",
+	"homepage" : "http://github.com/Canteen/CanteenHTML5",
+	"time": "2013-10-12",
+	"authors": [
+        {
+            "name": "Matt Karl",
+            "email": "matt@mattkarl.com",
+            "homepage": "http://github.com/bigtimebuddy",
+            "role": "Developer"
+        }
+	],
+    "autoload": {
+        "psr-0": {
+			"Canteen\\HTML5" : "src/"
+		},
+		"files": ["src/Canteen/HTML5/html.php"]
+    },
+	"minimum-stability": "stable",
+	"repositories": [
+		{
+			"type": "vcs",
+			"url": "https://github.com/Canteen/CanteenHTML5"
+		}
+	]
+}
