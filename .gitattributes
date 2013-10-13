@@ -4,4 +4,3 @@ build.xml export-ignore
 composer.json export-ignore
 docs.json export-ignore
 examples/ export-ignore
-README.md export-ignore
