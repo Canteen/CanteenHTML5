@@ -9,10 +9,16 @@ This library requires a webserver running PHP 5.3+. Also, the root namespace for
 
 ##Installation
 
-Simply include the `html.php` file. 
+Install is available using [Composer](http://getcomposer.org).
+
+```bash
+composer require canteen/html5 dev-master
+```
+
+Including using the Composer autoloader.
 
 ```php
-include 'lib/html.php';
+require vendor/autoload.php
 ```
 
 ##Usage
