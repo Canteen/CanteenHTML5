@@ -2,7 +2,7 @@
 
 Create dynamic, well-formatted HTML5 markup with a simple an intuitive PHP API. This is a fork/rewrite of the [Gagawa](https://code.google.com/p/gagawa/) project. CanteenHTML5 is a concise, flexible and easy to remember API which makes it possible to create simple markup (such as a link) or more complex structures (such a table, document or nested list). All tags and attribute names are validated against the current HTML5 specification.
 
-For documentation of the codebase, please see [Canteen HTML5 docs](http://canteen.github.io/CanteenHTML5/);
+For documentation of the codebase, please see [Canteen HTML5 docs](http://canteen.github.io/CanteenHTML5/).
 
 ##Requirements
 
