@@ -2,6 +2,8 @@
 
 Create dynamic, well-formatted HTML5 markup with a simple an intuitive PHP API. This is a fork/rewrite of the [Gagawa](https://code.google.com/p/gagawa/) project. CanteenHTML5 is a concise, flexible and easy to remember API which makes it possible to create simple markup (such as a link) or more complex structures (such a table, document or nested list). All tags and attribute names are validated against the current HTML5 specification.
 
+For documentation of the codebase, please see [Canteen HTML5 docs](http://canteen.github.io/CanteenHTML5/);
+
 ##Requirements
 
 
@@ -224,8 +226,16 @@ $table = new Table(
 );
 ```
 
+###Rebuild Documentation
+
+This library is auto-documented using [YUIDoc](http://yui.github.io/yuidoc/). To install YUIDoc, run `sudo npm install yuidocjs`. Also, this requires the project [CanteenTheme](http://github.com/Canteen/CanteenTheme) be checked-out along-side this repository. To rebuild the docs, run the ant task from the command-line. 
+
+```bash
+ant docs
+```
+
 ##License##
 
-Copyright (c) 2013 Matt Karl and [CloudKid, LLC](http://cloudkid.com)
+Copyright (c) 2013 [Matt Karl](http://github.com/bigtimebuddy)
 
 Released under the MIT License.
