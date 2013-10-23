@@ -23,6 +23,51 @@
 		<delete file="temp.json" />
 	</target>
 	
+	<target name="docsToGit" description="Auto-sync the docs to the Git docs branch">
+		<antcall target="docs" />
+		<delete dir="../${docs.outdir}" />
+		<copy todir="../${docs.outdir}">
+			<fileset dir="${docs.outdir}"/>
+		</copy>
+		<!-- Switch the branch -->
+		<exec executable="${git}" failonerror="true">
+			<arg line="checkout" />
+			<arg line="${git.docs}" />
+		</exec>
+		<delete includeEmptyDirs="true">
+			<fileset dir="." />
+		</delete>
+		<copy todir="./" overwrite="true">
+			<fileset dir="../${docs.outdir}" includes="**/*">
+				<depth max="3" />
+			</fileset>
+		</copy>
+		<delete dir="../${docs.outdir}" />
+		<!-- Add the files -->
+		<exec executable="${git}" failonerror="true">
+			<arg line="add" />
+			<arg line="-A" />
+			<arg line="." />
+		</exec>
+		<!-- Commit the files -->
+		<exec executable="${git}" failonerror="true">
+			<arg line="commit" />
+			<arg line="-m" />
+			<arg line='"Auto updated docs"' />
+		</exec>
+		<!-- Sync the files -->
+		<exec executable="${git}" failonerror="true">
+			<arg line="push" />
+			<arg line="origin" />
+			<arg line="${git.docs}" />
+		</exec>
+		<!-- Switch the branch back -->
+		<exec executable="${git}" failonerror="true">
+			<arg line="checkout" />
+			<arg line="${git.master}" />
+		</exec>
+	</target>
+	
 	<target name="clean" description="Remove all the YUIDocs">
 		<delete includeemptydirs="true">
 			<fileset dir="${docs.outdir}" includes="**/*" />
