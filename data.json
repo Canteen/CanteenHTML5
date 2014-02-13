@@ -2,12 +2,12 @@
     "project": {
         "name": "Canteen HTML5 API",
         "description": "Create dynamic, valid HTML5 markup with a simple an intuitive PHP API",
-        "version": "1.0.0",
+        "version": "1.0.1",
         "logo": ""
     },
     "files": {
-        "src/Canteen/HTML5/Attribute.php": {
-            "name": "src/Canteen/HTML5/Attribute.php",
+        "src/Attribute.php": {
+            "name": "src/Attribute.php",
             "modules": {
                 "Canteen\\HTML5": 1
             },
@@ -17,8 +17,8 @@
             "fors": {},
             "namespaces": {}
         },
-        "src/Canteen/HTML5/Comment.php": {
-            "name": "src/Canteen/HTML5/Comment.php",
+        "src/Comment.php": {
+            "name": "src/Comment.php",
             "modules": {},
             "classes": {
                 "Comment": 1
@@ -26,8 +26,8 @@
             "fors": {},
             "namespaces": {}
         },
-        "src/Canteen/HTML5/Document.php": {
-            "name": "src/Canteen/HTML5/Document.php",
+        "src/Document.php": {
+            "name": "src/Document.php",
             "modules": {},
             "classes": {
                 "Document": 1
@@ -35,8 +35,8 @@
             "fors": {},
             "namespaces": {}
         },
-        "src/Canteen/HTML5/HTML5Error.php": {
-            "name": "src/Canteen/HTML5/HTML5Error.php",
+        "src/HTML5Error.php": {
+            "name": "src/HTML5Error.php",
             "modules": {},
             "classes": {
                 "HTML5Error": 1
@@ -44,8 +44,8 @@
             "fors": {},
             "namespaces": {}
         },
-        "src/Canteen/HTML5/Node.php": {
-            "name": "src/Canteen/HTML5/Node.php",
+        "src/Node.php": {
+            "name": "src/Node.php",
             "modules": {},
             "classes": {
                 "Node": 1
@@ -53,8 +53,8 @@
             "fors": {},
             "namespaces": {}
         },
-        "src/Canteen/HTML5/NodeContainer.php": {
-            "name": "src/Canteen/HTML5/NodeContainer.php",
+        "src/NodeContainer.php": {
+            "name": "src/NodeContainer.php",
             "modules": {},
             "classes": {
                 "NodeContainer": 1
@@ -62,8 +62,8 @@
             "fors": {},
             "namespaces": {}
         },
-        "src/Canteen/HTML5/SimpleList.php": {
-            "name": "src/Canteen/HTML5/SimpleList.php",
+        "src/SimpleList.php": {
+            "name": "src/SimpleList.php",
             "modules": {},
             "classes": {
                 "SimpleList": 1
@@ -71,8 +71,8 @@
             "fors": {},
             "namespaces": {}
         },
-        "src/Canteen/HTML5/Table.php": {
-            "name": "src/Canteen/HTML5/Table.php",
+        "src/Table.php": {
+            "name": "src/Table.php",
             "modules": {},
             "classes": {
                 "Table": 1
@@ -80,8 +80,8 @@
             "fors": {},
             "namespaces": {}
         },
-        "src/Canteen/HTML5/Text.php": {
-            "name": "src/Canteen/HTML5/Text.php",
+        "src/Text.php": {
+            "name": "src/Text.php",
             "modules": {},
             "classes": {
                 "Text": 1
@@ -119,7 +119,7 @@
             "fors": {},
             "namespaces": {},
             "tag": "module",
-            "file": "src/Canteen/HTML5/Text.php",
+            "file": "src/Text.php",
             "line": 8
         },
         "global": {
@@ -146,7 +146,7 @@
             "extension_for": [],
             "module": "Canteen\\HTML5",
             "namespace": "",
-            "file": "src/Canteen/HTML5/Attribute.php",
+            "file": "src/Attribute.php",
             "line": 8,
             "description": "An HTML attribute used on the Node, this is used internally.\nDo not initiate this class directly, use the `html()` function\nto create attributes on elements.\n\n\techo html('a', 'Link', 'class=button href=\"about.html\"');\n\t\n\techo html('a', 'Link')\n\t\t->setAttribute('class', 'button')\n\t\t->setAttribute('href', 'about.html');",
             "is_constructor": 1,
@@ -177,7 +177,7 @@
             "extension_for": [],
             "module": "Canteen\\HTML5",
             "namespace": "",
-            "file": "src/Canteen/HTML5/Comment.php",
+            "file": "src/Comment.php",
             "line": 8,
             "description": "Special node type representing an HTML5 inline comment.\nDo not initiate this class directly, use the `html('comment')` function:\n\n\techo html('comment', 'Hidden HTML comment here');",
             "extends": "NodeContainer",
@@ -200,7 +200,7 @@
             "extension_for": [],
             "module": "Canteen\\HTML5",
             "namespace": "",
-            "file": "src/Canteen/HTML5/Document.php",
+            "file": "src/Document.php",
             "line": 8,
             "description": "Create an HTML document. Basic barebones structure. \nLocated in the namespace __Canteen\\HTML5__.\n\n\t$doc = new HTML5\\Document('Untitled');\n\t$doc->head->addChild(html('script src=main.js'));\n\t$doc->body->addChild(html('div#frame'));\n\techo $doc;",
             "extends": "NodeContainer",
@@ -239,7 +239,7 @@
             "extension_for": [],
             "module": "Canteen\\HTML5",
             "namespace": "",
-            "file": "src/Canteen/HTML5/HTML5Error.php",
+            "file": "src/HTML5Error.php",
             "line": 8,
             "description": "Exceptions with using the HTML5 API.\n\n\ttry\n\t{\n\t\thtml('invalid', 'something');\n\t}\n\tcatch(Canteen\\HTML5\\HTML5Error $e)\n\t{\n\t\t$e->getMessage();\n\t}",
             "extends": "Exception",
@@ -269,7 +269,7 @@
             "extension_for": [],
             "module": "Canteen\\HTML5",
             "namespace": "",
-            "file": "src/Canteen/HTML5/Node.php",
+            "file": "src/Node.php",
             "line": 8,
             "description": "A generic html tag with any children or closing tag. (e.g., img, br, hr).\nDo not initiate this class directly, use the `html()` function:\n\n\techo html('br');",
             "is_constructor": 1,
@@ -307,7 +307,7 @@
             "extension_for": [],
             "module": "Canteen\\HTML5",
             "namespace": "",
-            "file": "src/Canteen/HTML5/NodeContainer.php",
+            "file": "src/NodeContainer.php",
             "line": 8,
             "description": "Represents an HTML that that can contain other tags (e.g., br, p, div).\nDo not initiate this class directly, use the `html()` function:\n\n\t$div = html('div');",
             "extends": "Node",
@@ -353,7 +353,7 @@
             "extension_for": [],
             "module": "Canteen\\HTML5",
             "namespace": "",
-            "file": "src/Canteen/HTML5/SimpleList.php",
+            "file": "src/SimpleList.php",
             "line": 8,
             "description": "Convenience class for creating an ordered or un-ordered list.\n\n\t$list = new Canteen\\HTML5\\SimpleList(\n\t\tarray(\n\t\t\thtml('b', 'first'),\n\t\t\t'second', \n\t\t\t'third',\n\t\t\tarray(\n\t\t\t\t'sub-third',\n\t\t\t\t'sub-forth'\n\t\t\t)\n\t\t)\n\t);",
             "extends": "NodeContainer",
@@ -392,7 +392,7 @@
             "extension_for": [],
             "module": "Canteen\\HTML5",
             "namespace": "",
-            "file": "src/Canteen/HTML5/Table.php",
+            "file": "src/Table.php",
             "line": 8,
             "description": "Convenience class for building a Table. Useful for display\nrows of data from a database or another collection\nof associative arrays.\n\t\n\t$table = new Canteen\\HTML5\\Table(\n\t\tarray(\n\t\t\tarray('id'=>1, 'first'=>'James', 'last'=>'Smith'),\n\t\t\tarray('id'=>2, 'first'=>'Mary', 'last'=>'Denver'),\n\t\t\tarray('id'=>3, 'first'=>'Charlie', 'last'=>'Rose')\n\t\t),\n\t\tarray('ID', 'First Name', 'Last Name')\n\t);",
             "extends": "NodeContainer",
@@ -429,7 +429,7 @@
             "extension_for": [],
             "module": "Canteen\\HTML5",
             "namespace": "",
-            "file": "src/Canteen/HTML5/Text.php",
+            "file": "src/Text.php",
             "line": 8,
             "description": "Special Node representing plain text. Do not initiate this \nclass directly, it is created whenever a text is passed into \na container tag:\n\n\techo html('p', 'Some Text Here');",
             "extends": "Node",
@@ -485,7 +485,7 @@
     },
     "classitems": [
         {
-            "file": "src/Canteen/HTML5/Attribute.php",
+            "file": "src/Attribute.php",
             "line": 26,
             "description": "The name of the attribute",
             "itemtype": "property",
@@ -497,7 +497,7 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/Attribute.php",
+            "file": "src/Attribute.php",
             "line": 33,
             "description": "The value of the attribute",
             "itemtype": "property",
@@ -509,7 +509,7 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/Attribute.php",
+            "file": "src/Attribute.php",
             "line": 46,
             "description": "Convert the attribute to an HTML tag attribute string",
             "itemtype": "method",
@@ -522,7 +522,7 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/Attribute.php",
+            "file": "src/Attribute.php",
             "line": 56,
             "description": "Get the name of this attribute",
             "itemtype": "method",
@@ -535,7 +535,7 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/Attribute.php",
+            "file": "src/Attribute.php",
             "line": 66,
             "description": "Set the name of this attribute, cannot be empty",
             "itemtype": "method",
@@ -553,7 +553,7 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/Attribute.php",
+            "file": "src/Attribute.php",
             "line": 80,
             "description": "Get the value of this attribute",
             "itemtype": "method",
@@ -568,7 +568,7 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/Attribute.php",
+            "file": "src/Attribute.php",
             "line": 91,
             "description": "Set the value of this attribute, this cannot be empty",
             "itemtype": "method",
@@ -586,7 +586,7 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/Attribute.php",
+            "file": "src/Attribute.php",
             "line": 102,
             "description": "Convert a string into an associative array",
             "itemtype": "method",
@@ -607,7 +607,7 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/Attribute.php",
+            "file": "src/Attribute.php",
             "line": 130,
             "description": "General purpose getter for getting attribute->name and attribute->value",
             "access": "public",
@@ -623,7 +623,7 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/Attribute.php",
+            "file": "src/Attribute.php",
             "line": 143,
             "description": "General purpose setter for setting attribute->name and attribute->value",
             "access": "public",
@@ -644,7 +644,7 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/Attribute.php",
+            "file": "src/Attribute.php",
             "line": 157,
             "description": "See if a property exists",
             "itemtype": "method",
@@ -660,7 +660,7 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/Comment.php",
+            "file": "src/Comment.php",
             "line": 26,
             "description": "Write to HTML",
             "itemtype": "method",
@@ -673,7 +673,7 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/Document.php",
+            "file": "src/Document.php",
             "line": 26,
             "description": "The document type",
             "itemtype": "property",
@@ -683,7 +683,7 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/Document.php",
+            "file": "src/Document.php",
             "line": 32,
             "description": "The head node",
             "itemtype": "property",
@@ -693,7 +693,7 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/Document.php",
+            "file": "src/Document.php",
             "line": 38,
             "description": "The body node",
             "itemtype": "property",
@@ -703,7 +703,7 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/Document.php",
+            "file": "src/Document.php",
             "line": 44,
             "description": "The title node",
             "itemtype": "property",
@@ -713,7 +713,7 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/Document.php",
+            "file": "src/Document.php",
             "line": 50,
             "description": "Beautify the output",
             "itemtype": "property",
@@ -723,14 +723,14 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/Document.php",
+            "file": "src/Document.php",
             "line": 56,
             "description": "Constructor for Docs",
             "class": "Document",
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/Document.php",
+            "file": "src/Document.php",
             "line": 75,
             "description": "Write to HTML",
             "itemtype": "method",
@@ -743,7 +743,7 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/Document.php",
+            "file": "src/Document.php",
             "line": 88,
             "description": "Beautifies an HTML string into a human-readable and indented work of art.",
             "itemtype": "method",
@@ -764,7 +764,7 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/HTML5Error.php",
+            "file": "src/HTML5Error.php",
             "line": 28,
             "description": "The database connection failed",
             "itemtype": "property",
@@ -776,7 +776,7 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/HTML5Error.php",
+            "file": "src/HTML5Error.php",
             "line": 36,
             "description": "The alias for a database is invalid",
             "itemtype": "property",
@@ -788,7 +788,7 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/HTML5Error.php",
+            "file": "src/HTML5Error.php",
             "line": 44,
             "description": "The database name we're trying to switch to is invalid",
             "itemtype": "property",
@@ -800,7 +800,7 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/HTML5Error.php",
+            "file": "src/HTML5Error.php",
             "line": 52,
             "description": "The mysql where trying to execute was a problem",
             "itemtype": "property",
@@ -812,7 +812,7 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/HTML5Error.php",
+            "file": "src/HTML5Error.php",
             "line": 60,
             "description": "The html tag name is invalid",
             "itemtype": "property",
@@ -824,7 +824,7 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/HTML5Error.php",
+            "file": "src/HTML5Error.php",
             "line": 68,
             "description": "When trying to create a node, the name is empty",
             "itemtype": "property",
@@ -836,7 +836,7 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/HTML5Error.php",
+            "file": "src/HTML5Error.php",
             "line": 76,
             "description": "The parent cannot be empty",
             "itemtype": "property",
@@ -848,7 +848,7 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/HTML5Error.php",
+            "file": "src/HTML5Error.php",
             "line": 84,
             "description": "THe addChildAt is out of bounds",
             "itemtype": "property",
@@ -860,7 +860,7 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/HTML5Error.php",
+            "file": "src/HTML5Error.php",
             "line": 92,
             "description": "The child node is empty",
             "itemtype": "property",
@@ -872,7 +872,7 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/HTML5Error.php",
+            "file": "src/HTML5Error.php",
             "line": 100,
             "description": "The node is not of instance type Node",
             "itemtype": "property",
@@ -884,7 +884,7 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/HTML5Error.php",
+            "file": "src/HTML5Error.php",
             "line": 108,
             "description": "Look-up for error messages",
             "itemtype": "property",
@@ -897,7 +897,7 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/HTML5Error.php",
+            "file": "src/HTML5Error.php",
             "line": 127,
             "description": "The label for an error that is unknown or unfound in messages",
             "itemtype": "property",
@@ -909,7 +909,7 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/Node.php",
+            "file": "src/Node.php",
             "line": 22,
             "description": "The string name of the tag",
             "itemtype": "property",
@@ -921,7 +921,7 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/Node.php",
+            "file": "src/Node.php",
             "line": 29,
             "description": "The collection of Attributes objects",
             "itemtype": "property",
@@ -933,7 +933,7 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/Node.php",
+            "file": "src/Node.php",
             "line": 36,
             "description": "The parent node, if any",
             "itemtype": "property",
@@ -945,7 +945,7 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/Node.php",
+            "file": "src/Node.php",
             "line": 43,
             "description": "The collection of valid attributes names for given tag",
             "itemtype": "property",
@@ -957,7 +957,7 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/Node.php",
+            "file": "src/Node.php",
             "line": 50,
             "description": "The default valid attributes",
             "itemtype": "property",
@@ -969,7 +969,7 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/Node.php",
+            "file": "src/Node.php",
             "line": 90,
             "description": "Returns the parent node of this node, if\na parent exists.  If no parent exists,\nthis function returns null.",
             "itemtype": "method",
@@ -984,7 +984,7 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/Node.php",
+            "file": "src/Node.php",
             "line": 103,
             "description": "Sets the parent of this Node.  Note that this\nfunction is protected and can only be called by\nclasses that extend Node.  The parent cannot\nbe null; this function will throw an Exception\nif the parent node is empty.",
             "itemtype": "method",
@@ -1004,7 +1004,7 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/Node.php",
+            "file": "src/Node.php",
             "line": 122,
             "description": "Given a name and value pair, sets an attribute on this Node.\nThe name and value cannot be empty; if so, this function\nwill throw an Exception.  Note if the attribute already exists\nand the caller wants to set an attribute of the same name,\nthis function will not create a new Attribute, but rather\nupdate the value of the existing named attribute.",
             "itemtype": "method",
@@ -1034,7 +1034,7 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/Node.php",
+            "file": "src/Node.php",
             "line": 156,
             "description": "Fetch and attribute by name from this Node.  The attribute\nname cannot be null; if so, this function will throw an\nException.",
             "itemtype": "method",
@@ -1056,7 +1056,7 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/Node.php",
+            "file": "src/Node.php",
             "line": 183,
             "description": "Set the list of all attributes.",
             "itemtype": "method",
@@ -1076,7 +1076,7 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/Node.php",
+            "file": "src/Node.php",
             "line": 201,
             "description": "Set the a data-* HTML5 Attribute",
             "params": [
@@ -1099,7 +1099,7 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/Node.php",
+            "file": "src/Node.php",
             "line": 212,
             "description": "Add this child to a node container at the end",
             "itemtype": "method",
@@ -1119,7 +1119,7 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/Node.php",
+            "file": "src/Node.php",
             "line": 224,
             "description": "Add this child to the beginning of a node container",
             "itemtype": "method",
@@ -1139,7 +1139,7 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/Node.php",
+            "file": "src/Node.php",
             "line": 236,
             "description": "Get the data-* HTML5 attribute value, if set",
             "itemtype": "method",
@@ -1159,7 +1159,7 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/Node.php",
+            "file": "src/Node.php",
             "line": 247,
             "description": "Write to HTML",
             "itemtype": "method",
@@ -1172,7 +1172,7 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/Node.php",
+            "file": "src/Node.php",
             "line": 257,
             "description": "Start the writing the tag",
             "itemtype": "method",
@@ -1196,7 +1196,7 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/Node.php",
+            "file": "src/Node.php",
             "line": 276,
             "description": "General purpose getter to get attribute values",
             "itemtype": "method",
@@ -1212,7 +1212,7 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/Node.php",
+            "file": "src/Node.php",
             "line": 290,
             "description": "General purpose setter to set attribute values",
             "itemtype": "method",
@@ -1233,7 +1233,7 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/Node.php",
+            "file": "src/Node.php",
             "line": 305,
             "description": "See if a property exists",
             "itemtype": "method",
@@ -1249,7 +1249,7 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/Node.php",
+            "file": "src/Node.php",
             "line": 315,
             "description": "Checks if a variable is really \"empty\".  Code borrowed from PHP.net at\nhttp://us3.php.net/manual/en/function.empty.php#90767 because we were\npreviously using empty() to see if a variable is empty or not.  But\nempty() dosen't work for attributes that have a value of \"0\", so we need\nsomething more robust here.\n<ul>\n<li>an unset variable -> empty</li>\n<li>null -> empty</li>\n<li>0 -> NOT empty</li>\n<li>\"0\" -> NOT empty</li>\n<li>false -> empty</li>\n<li>true -> NOT empty</li>\n<li>'string value' -> NOT empty</li>\n<li>\"\t\"(white space) -> empty</li>\n<li>array()(empty array) -> empty</li>\n</ul>",
             "itemtype": "method",
@@ -1267,7 +1267,7 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/NodeContainer.php",
+            "file": "src/NodeContainer.php",
             "line": 24,
             "description": "The collection of children nodes",
             "itemtype": "property",
@@ -1279,7 +1279,7 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/NodeContainer.php",
+            "file": "src/NodeContainer.php",
             "line": 57,
             "description": "Add's a child to this NodeContainer. The child to add cannot be null.",
             "itemtype": "method",
@@ -1299,7 +1299,7 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/NodeContainer.php",
+            "file": "src/NodeContainer.php",
             "line": 69,
             "description": "Add a child at a specific index",
             "itemtype": "method",
@@ -1324,7 +1324,7 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/NodeContainer.php",
+            "file": "src/NodeContainer.php",
             "line": 98,
             "description": "Before adding a child, we should do some checking for basic types\nand convert it into a more useable Node object.",
             "itemtype": "method",
@@ -1346,7 +1346,7 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/NodeContainer.php",
+            "file": "src/NodeContainer.php",
             "line": 128,
             "description": "Removes the first instance of child from this.  \nOnce the first instance of the child\nis removed, this function will return.  It returns\ntrue if a child was removed and false if no child\nwas removed.",
             "itemtype": "method",
@@ -1368,7 +1368,7 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/NodeContainer.php",
+            "file": "src/NodeContainer.php",
             "line": 157,
             "description": "Remove a child as a specific index",
             "itemtype": "method",
@@ -1388,7 +1388,7 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/NodeContainer.php",
+            "file": "src/NodeContainer.php",
             "line": 173,
             "description": "Removes all children attached to this Node container",
             "itemtype": "method",
@@ -1401,7 +1401,7 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/NodeContainer.php",
+            "file": "src/NodeContainer.php",
             "line": 185,
             "description": "Returns an array of all children attached to this Node container.",
             "itemtype": "method",
@@ -1414,7 +1414,7 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/NodeContainer.php",
+            "file": "src/NodeContainer.php",
             "line": 195,
             "description": "Gets a child of this Node container at given\nindex.  If no index is passed in, getChild()\nwill return the child at index zero (0).",
             "itemtype": "method",
@@ -1436,7 +1436,7 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/NodeContainer.php",
+            "file": "src/NodeContainer.php",
             "line": 208,
             "description": "Close the writing of this container as HTML",
             "itemtype": "method",
@@ -1451,7 +1451,7 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/NodeContainer.php",
+            "file": "src/NodeContainer.php",
             "line": 219,
             "description": "Write to HTML",
             "itemtype": "method",
@@ -1464,7 +1464,7 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/SimpleList.php",
+            "file": "src/SimpleList.php",
             "line": 48,
             "description": "Override for the prepareChild method on NodeContainer which \nwraps each elements in a list item",
             "itemtype": "method",
@@ -1486,7 +1486,7 @@
             "module": "Canteen\\HTML5"
         },
         {
-            "file": "src/Canteen/HTML5/Text.php",
+            "file": "src/Text.php",
             "line": 27,
             "description": "Write to HTML",
             "itemtype": "method",
@@ -1509,19 +1509,19 @@
     "warnings": [
         {
             "message": "Missing item type\nGeneral purpose getter for getting attribute->name and attribute->value",
-            "line": " src/Canteen/HTML5/Attribute.php:130"
+            "line": " src/Attribute.php:130"
         },
         {
             "message": "Missing item type\nGeneral purpose setter for setting attribute->name and attribute->value",
-            "line": " src/Canteen/HTML5/Attribute.php:143"
+            "line": " src/Attribute.php:143"
         },
         {
             "message": "Missing item type\nConstructor for Docs",
-            "line": " src/Canteen/HTML5/Document.php:56"
+            "line": " src/Document.php:56"
         },
         {
             "message": "Missing item type\nSet the a data-* HTML5 Attribute",
-            "line": " src/Canteen/HTML5/Node.php:201"
+            "line": " src/Node.php:201"
         },
         {
             "message": "Missing item type\nAuto load the assets in this library",
