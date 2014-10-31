@@ -29,6 +29,12 @@ require 'vendor/autoload.php';
 To create an HTML node, simply call global `html` method, passing in the tag name and then any attributes.
 
 ```php
+// Enable the global use of html()
+Canteen\HTML5\HTML5::useGlobal();
+
+// Turn on autoloading if not using composer's autoloading
+Canteen\HTML5\HTML5::autoload();
+
 echo html('img src=home.jpg');
 echo html('img', 'src=home.jpg'); 
 echo html('img', array('src'=>'home.jpg')); 
