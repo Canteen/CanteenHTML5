@@ -32,7 +32,7 @@ namespace Canteen\HTML5
 	{
 		public function __construct($data, $headers=null, $checkbox=null)
 		{
-			parent::__construct('table', null, null, 'border');
+			parent::__construct('table', null, null);
 			
 			if ($headers != null && is_array($headers))
 			{

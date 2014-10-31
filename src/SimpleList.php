@@ -31,8 +31,7 @@ namespace Canteen\HTML5
 	{
 		public function __construct($elements=null, $attributes=null, $type='ul')
 		{
-			parent::__construct($type, null, $attributes, 
-				$type == 'ol' ? 'reversed,start,type' : null);
+			parent::__construct($type, null, $attributes);
 			
 			if ($elements != null)
 			{

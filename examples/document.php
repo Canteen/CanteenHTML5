@@ -1,6 +1,10 @@
 <?php
 
-	include '../lib/html.php';
+	include '../src/HTML5.php';
+	use Canteen\HTML5\HTML5;
+
+	HTML5::autoload(); // Autoload the classes, helpful if using outside composer
+	HTML5::useGlobal(); // if you want to use the global html() method instead of namespaced one
 	
 	use Canteen\HTML5\Document;
 	use Canteen\HTML5\SimpleList;

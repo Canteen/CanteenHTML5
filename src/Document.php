@@ -58,7 +58,12 @@ namespace Canteen\HTML5
 		*/
 		public function __construct($title='', $charset='utf-8', $beautify=false)
 		{
-			parent::__construct('html', null, null, 'manifest');
+			parent::__construct('html', null, null, 
+				array_merge(
+					array('manifest'), 
+					Specification::$ATTRIBUTES
+				)
+			);
 			
 			$this->docType = html('doctype');
 			$this->head = html('head');

@@ -17,7 +17,6 @@ namespace Canteen\HTML5
 	*  @param {String} [tag=null] The name of the tag element
 	*  @param {Node|Array} [children=null] The collection of children or single child
 	*  @param {String|Dictionary} [attributes=null] The tag attributes
-	*  @param {String} [validAttrs=null] Valid attributes specific to the HTML5 element, comma separated
 	*/
 	class NodeContainer extends Node 
 	{
@@ -28,13 +27,13 @@ namespace Canteen\HTML5
 		*/
 		private $_children;
 
-		public function __construct($tag = null, $children = null, $attributes = null, $validAttrs=null)
+		public function __construct($tag = null, $children = null, $attributes = null)
 		{
 			if ($this->isEmpty($tag))
 			{
 				throw new HTML5Error(HTML5Error::EMPTY_NODE_TAG);
 			}
-			parent::__construct($tag, $attributes, $validAttrs);
+			parent::__construct($tag, $attributes);
 			
 			$this->_children = array();
 			

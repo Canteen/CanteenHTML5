@@ -15,7 +15,6 @@ namespace Canteen\HTML5
 	*  @constructor
 	*  @param {String} [tag=null] The name of the tag
 	*  @param {Array|String} [attributes=null] The collection of tag attributes
-	*  @param {String} [validAttrs=null] The list of non-global valid attributes for the tag, comma separated
 	*/
 	class Node
 	{
@@ -47,15 +46,7 @@ namespace Canteen\HTML5
 		*/
 		protected $_validAttrs;
 		
-		/** 
-		*  The default valid attributes
-		*  @property {String} GLOBAL_ATTRS
-		*  @final
-		*  @static
-		*/
-		const GLOBAL_ATTRS = 'accesskey,class,contenteditable,contextmenu,dir,draggable,dropzone,hidden,id,lang,spellcheck,style,tabindex,title,translate';
-		
-		public function __construct($tag = null, $attributes = null, $validAttrs = null) 
+		public function __construct($tag = null, $attributes = null) 
 		{
 			if ($this->isEmpty($tag))
 			{
@@ -64,13 +55,17 @@ namespace Canteen\HTML5
 			$this->_parent = null;
 			$this->_tag = $tag;
 			$this->_attributes = array();
-			
-			$validAttrs = is_string($validAttrs) ? explode(',', $validAttrs) : $validAttrs;
-			$this->_validAttrs = explode(',', self::GLOBAL_ATTRS);
-			
-			if ($validAttrs !== null)
+
+			if (isset(Specification::$TAGS[$tag]))
 			{
-				$this->_validAttrs  = array_merge($this->_validAttrs, $validAttrs);
+				$this->_validAttrs = array_merge(
+					Specification::$TAGS[$tag],
+					Specification::$ATTRIBUTES
+				);
+			}
+			else
+			{
+				$this->_validAttrs = array();
 			}
 			
 			if ($attributes !== null)
@@ -299,7 +294,6 @@ namespace Canteen\HTML5
 			{
 				return $this->setAttribute($name, $value);
 			}
-			return parent::__set($name);
 		}
 
 		/**
