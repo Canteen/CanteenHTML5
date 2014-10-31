@@ -17,6 +17,7 @@
 	// Add a link to the page
 	$link = html('a#google.external rel=external', 'Link', 'class="test something" target=blank rel=test');
 	$link->href = 'http://google.com';
+	$link->onclick = "return confirm('Navigate away?');";
 	$link->appendTo($doc->body);
 	
 	// Create an unordered list for an array of items
