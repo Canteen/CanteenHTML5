@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
     <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
     <script src="http://yui.yahooapis.com/3.10.1/build/yui/yui-min.js"></script>
-	<title>Canteen HTML5 API v1.1.1 API Documentation : html</title>  
+	<title>Canteen HTML5 API v1.1.1 API Documentation : Specification</title>  
 </head>
 <body class="yui3-skin-sam">
 
@@ -106,7 +106,7 @@
             <div class="apidocs">
                 <div id="docs-main">
                     <div class="content">
-                        <h1>html Class</h1>
+                        <h1>Specification Class</h1>
 <div class="box meta">
     
 
@@ -116,7 +116,7 @@
 
     
         
-            Namespace: <a href="../modules/global.html">global</a>
+            Namespace: <a href="../modules/Canteen\HTML5.html">Canteen\HTML5</a>
         
     
 
@@ -126,47 +126,20 @@
 
 
 <div class="box intro">
-    <p>The global method which is an alias for Canteen\HTML5\html()
-to use this method globally call Canteen\HTML5\HTML5::useGlobal()</p>
+    <p>The HTML5 Specification</p>
 
 </div>
 
 
     <div class="constructor">
         <h2>Constructor</h2>
-        <div id="method_html" class="method item">
-    <h3 class="name"><code>html</code></h3>
+        <div id="method_Specification" class="method item">
+    <h3 class="name"><code>Specification</code></h3>
 
     
-        <div class="args">
-            <span class="paren">(</span><ul class="args-list inline commas">
-            
-                <li class="arg">
-                    
-                        <code>tag</code>
-                    
-                </li>
-            
-                <li class="arg">
-                    
-                        <code class="optional">[childrenOrAttributes=null]</code>
-                    
-                </li>
-            
-                <li class="arg">
-                    
-                        <code class="optional">[attributes=null]</code>
-                    
-                </li>
-            
-            </ul><span class="paren">)</span>
-        </div>
+        <span class="paren">()</span>
     
 
-    
-        <span class="returns-inline">
-            <span class="type"><a href="../classes/Node.html" class="crosslink">Node</a></span>
-        </span>
     
 
     
@@ -203,82 +176,7 @@ to use this method globally call Canteen\HTML5\HTML5::useGlobal()</p>
     </div>
 
     
-        <div class="params">
-            <h4>Parameters:</h4>
 
-            <ul class="params-list">
-            
-                <li class="param">
-                    
-                        <code class="param-name">tag</code>
-                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
-                    
-
-                    
-
-                    <div class="param-description">
-                        <p>The name of the tag as a string for example &#39;tr&#39;, &#39;table&#39;, can be followed 
-         by CSS selector, e.g. &#39;a#backButton&#39; or &#39;a.button&#39;</p>
-
-                    </div>
-
-                    
-                </li>
-            
-                <li class="param">
-                    
-                        <code class="param-name optional">[childrenOrAttributes=null]</code>
-                        <span class="type">Dictionary | <a href="../classes/Node.html" class="crosslink">Node</a> | <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a> | <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array" class="crosslink external" target="_blank">Array</a></span>
-                        <span class="flag optional" title="This parameter is optional.">optional</span>
-                    
-
-                    
-
-                    <div class="param-description">
-                        <p>If the tag is a NodeContainer, this can be an array 
-          of attributes, another html node or some text. If the tag is a single node, this can 
-      be an array or chain of attributes</p>
-
-                    </div>
-
-                    
-                </li>
-            
-                <li class="param">
-                    
-                        <code class="param-name optional">[attributes=null]</code>
-                        <span class="type">Dictionary | <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
-                        <span class="flag optional" title="This parameter is optional.">optional</span>
-                    
-
-                    
-
-                    <div class="param-description">
-                        <p>The attributes list for container tags (e.g., &#39;class:selected&#39;)</p>
-
-                    </div>
-
-                    
-                </li>
-            
-            </ul>
-        </div>
-    
-
-    
-        <div class="returns">
-            <h4>Returns:</h4>
-
-            <div class="returns-description">
-                
-                    
-                        <span class="type"><a href="../classes/Node.html" class="crosslink">Node</a></span>:
-                    
-                    <p>Return the html node</p>
-
-                
-            </div>
-        </div>
     
 
     
@@ -293,6 +191,8 @@ to use this method globally call Canteen\HTML5\HTML5::useGlobal()</p>
 
         
         
+            <li class="api-class-tab properties"><a href="#properties">Properties</a></li>
+        
         
         
     </ul>
@@ -304,6 +204,41 @@ to use this method globally call Canteen\HTML5\HTML5::useGlobal()</p>
             
 
             
+                <div class="index-section properties">
+                    <h3>Properties</h3>
+
+                    <ul class="index-list properties">
+                        
+                            <li class="index-item property">
+                                <a href="#property_ATTRIBUTES">ATTRIBUTES</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property">
+                                <a href="#property_SELF_CLOSING">SELF_CLOSING</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property">
+                                <a href="#property_TAGS">TAGS</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                    </ul>
+                </div>
+            
 
             
 
@@ -312,6 +247,148 @@ to use this method globally call Canteen\HTML5\HTML5::useGlobal()</p>
 
         
 
+        
+            <div id="properties" class="api-class-tabpanel">
+                <h2 class="off-left">Properties</h2>
+
+                
+                    <div id="property_ATTRIBUTES" class="property item">
+    <h3 class="name"><code>ATTRIBUTES</code></h3>
+    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array" class="crosslink external" target="_blank">Array</a></span>
+
+    
+
+    
+
+    
+        <span class="flag final">final</span>
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+            
+        
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Global valid attributes for all HTML5 tags
+See: <a href="http://www.w3.org/TR/html5/dom.html#global-attributes">http://www.w3.org/TR/html5/dom.html#global-attributes</a></p>
+
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_SELF_CLOSING" class="property item">
+    <h3 class="name"><code>SELF_CLOSING</code></h3>
+    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array" class="crosslink external" target="_blank">Array</a></span>
+
+    
+
+    
+
+    
+        <span class="flag final">final</span>
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+            
+        
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>The list of self-closing tags</p>
+
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_TAGS" class="property item">
+    <h3 class="name"><code>TAGS</code></h3>
+    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array" class="crosslink external" target="_blank">Array</a></span>
+
+    
+
+    
+
+    
+        <span class="flag final">final</span>
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+            
+        
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>The list of all tags and their specific attributes</p>
+
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+            </div>
         
 
         

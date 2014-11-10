@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
     <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
     <script src="http://yui.yahooapis.com/3.10.1/build/yui/yui-min.js"></script>
-	<title>Canteen HTML5 API v1.1.1 API Documentation : html</title>  
+	<title>Canteen HTML5 API v1.1.1 API Documentation : HTML5</title>  
 </head>
 <body class="yui3-skin-sam">
 
@@ -106,7 +106,7 @@
             <div class="apidocs">
                 <div id="docs-main">
                     <div class="content">
-                        <h1>html Class</h1>
+                        <h1>HTML5 Class</h1>
 <div class="box meta">
     
 
@@ -116,7 +116,7 @@
 
     
         
-            Namespace: <a href="../modules/global.html">global</a>
+            Namespace: <a href="../modules/Canteen\HTML5.html">Canteen\HTML5</a>
         
     
 
@@ -126,15 +126,127 @@
 
 
 <div class="box intro">
-    <p>The global method which is an alias for Canteen\HTML5\html()
-to use this method globally call Canteen\HTML5\HTML5::useGlobal()</p>
+    <p>Main class of the library</p>
 
 </div>
 
 
-    <div class="constructor">
-        <h2>Constructor</h2>
-        <div id="method_html" class="method item">
+
+<div id="classdocs" class="tabview">
+    <ul class="api-class-tabs">
+        <li class="api-class-tab index"><a href="#index">Index</a></li>
+
+        
+            <li class="api-class-tab methods"><a href="#methods">Methods</a></li>
+        
+        
+        
+        
+    </ul>
+
+    <div>
+        <div id="index" class="api-class-tabpanel index">
+            <h2 class="off-left">Item Index</h2>
+
+            
+                <div class="index-section methods">
+                    <h3>Methods</h3>
+
+                    <ul class="index-list methods">
+                        
+                            <li class="index-item method">
+                                <a href="#method_autoload">autoload</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_html">html</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_useGlobal">useGlobal</a>
+
+                                
+                                
+                            </li>
+                        
+                    </ul>
+                </div>
+            
+
+            
+
+            
+
+            
+        </div>
+
+        
+            <div id="methods" class="api-class-tabpanel">
+                <h2 class="off-left">Methods</h2>
+
+                
+                    <div id="method_autoload" class="method item">
+    <h3 class="name"><code>autoload</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+            
+        
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Turn on autoloading for the library</p>
+
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="method_html" class="method item">
     <h3 class="name"><code>html</code></h3>
 
     
@@ -199,7 +311,16 @@ to use this method globally call Canteen\HTML5\HTML5::useGlobal()</p>
     </div>
 
     <div class="description">
-        
+        <p>This is the global function is the main entry for interacting with the HTML5 for PHP library. 
+using <code>html()</code> global function you can create HTML5 quickly and easily. For more
+examples and instruction on how to use this library, please refer to the the 
+<a href="https://github.com/Canteen/CanteenHTML5">GitHub project</a>. 
+To install the library simply include <code>html.php</code>, this takes care of any autoloading that&#39;s needed
+for the rest of the library.</p>
+<pre class="code prettyprint"><code>echo html(&#39;img src=home.jpg&#39;); 
+echo html(&#39;img&#39;, &#39;src=home.jpg&#39;); 
+echo html(&#39;a&#39;, array(&#39;href&#39;=&gt;&#39;about.html&#39;));</code></pre>
+
     </div>
 
     
@@ -284,32 +405,59 @@ to use this method globally call Canteen\HTML5\HTML5::useGlobal()</p>
     
 </div>
 
+                
+                    <div id="method_useGlobal" class="method item">
+    <h3 class="name"><code>useGlobal</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+            
+        
+        
+        </p>
+
+
+        
+
+        
     </div>
 
+    <div class="description">
+        <p>Use the global <code>html()</code> method</p>
 
-<div id="classdocs" class="tabview">
-    <ul class="api-class-tabs">
-        <li class="api-class-tab index"><a href="#index">Index</a></li>
+    </div>
 
-        
-        
-        
-        
-    </ul>
+    
 
-    <div>
-        <div id="index" class="api-class-tabpanel index">
-            <h2 class="off-left">Item Index</h2>
+    
 
-            
+    
+</div>
 
-            
-
-            
-
-            
-        </div>
-
+                
+            </div>
         
 
         

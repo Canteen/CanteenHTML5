@@ -4,10 +4,13 @@ YUI.add("yuidoc-meta", function(Y) {
         "Attribute",
         "Comment",
         "Document",
+        "Fragment",
+        "HTML5",
         "HTML5Error",
         "Node",
         "NodeContainer",
         "SimpleList",
+        "Specification",
         "Table",
         "Text",
         "html"

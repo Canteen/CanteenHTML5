@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
     <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
     <script src="http://yui.yahooapis.com/3.10.1/build/yui/yui-min.js"></script>
-	<title>Canteen HTML5 API v1.1.1 API Documentation : Node</title>  
+	<title>Canteen HTML5 API v1.1.1 API Documentation : Fragment</title>  
 </head>
 <body class="yui3-skin-sam">
 
@@ -106,10 +106,14 @@
             <div class="apidocs">
                 <div id="docs-main">
                     <div class="content">
-                        <h1>Node Class</h1>
+                        <h1>Fragment Class</h1>
 <div class="box meta">
     
 
+    
+        <div class="extends">
+            Extends <a href="../classes/NodeContainer.html" class="crosslink">NodeContainer</a>
+        </div>
     
 
     
@@ -126,17 +130,17 @@
 
 
 <div class="box intro">
-    <p>A generic html tag with any children or closing tag. (e.g., img, br, hr).
+    <p>Represents a set of HTML tags without a wrapper.
 Do not initiate this class directly, use the <code>html()</code> function:</p>
-<pre class="code prettyprint"><code>echo html(&#39;br&#39;);</code></pre>
+<pre class="code prettyprint"><code>$div = html(&#39;fragment&#39;);</code></pre>
 
 </div>
 
 
     <div class="constructor">
         <h2>Constructor</h2>
-        <div id="method_Node" class="method item">
-    <h3 class="name"><code>Node</code></h3>
+        <div id="method_Fragment" class="method item">
+    <h3 class="name"><code>Fragment</code></h3>
 
     
         <div class="args">
@@ -144,13 +148,7 @@ Do not initiate this class directly, use the <code>html()</code> function:</p>
             
                 <li class="arg">
                     
-                        <code class="optional">[tag=null]</code>
-                    
-                </li>
-            
-                <li class="arg">
-                    
-                        <code class="optional">[attributes=null]</code>
+                        <code class="optional">[children=null]</code>
                     
                 </li>
             
@@ -201,32 +199,15 @@ Do not initiate this class directly, use the <code>html()</code> function:</p>
             
                 <li class="param">
                     
-                        <code class="param-name optional">[tag=null]</code>
-                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
+                        <code class="param-name optional">[children=null]</code>
+                        <span class="type"><a href="../classes/Node.html" class="crosslink">Node</a> | <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array" class="crosslink external" target="_blank">Array</a></span>
                         <span class="flag optional" title="This parameter is optional.">optional</span>
                     
 
                     
 
                     <div class="param-description">
-                        <p>The name of the tag</p>
-
-                    </div>
-
-                    
-                </li>
-            
-                <li class="param">
-                    
-                        <code class="param-name optional">[attributes=null]</code>
-                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array" class="crosslink external" target="_blank">Array</a> | <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
-                        <span class="flag optional" title="This parameter is optional.">optional</span>
-                    
-
-                    
-
-                    <div class="param-description">
-                        <p>The collection of tag attributes</p>
+                        <p>The collection of children or single child</p>
 
                     </div>
 
@@ -267,100 +248,163 @@ Do not initiate this class directly, use the <code>html()</code> function:</p>
                 <div class="index-section methods">
                     <h3>Methods</h3>
 
-                    <ul class="index-list methods">
+                    <ul class="index-list methods extends">
                         
-                            <li class="index-item method">
+                            <li class="index-item method inherited">
                                 <a href="#method___get">__get</a>
 
                                 
                                 
                             </li>
                         
-                            <li class="index-item method">
+                            <li class="index-item method inherited">
                                 <a href="#method___isset">__isset</a>
 
                                 
                                 
                             </li>
                         
-                            <li class="index-item method">
+                            <li class="index-item method inherited">
                                 <a href="#method___set">__set</a>
 
                                 
                                 
                             </li>
                         
-                            <li class="index-item method">
+                            <li class="index-item method inherited">
                                 <a href="#method___toString">__toString</a>
 
                                 
                                 
                             </li>
                         
-                            <li class="index-item method">
+                            <li class="index-item method inherited">
+                                <a href="#method_addChild">addChild</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method inherited">
+                                <a href="#method_addChildAt">addChildAt</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method inherited">
                                 <a href="#method_appendTo">appendTo</a>
 
                                 
                                 
                             </li>
                         
-                            <li class="index-item method">
+                            <li class="index-item method inherited">
                                 <a href="#method_getAttribute">getAttribute</a>
 
                                 
                                 
                             </li>
                         
-                            <li class="index-item method">
+                            <li class="index-item method inherited">
+                                <a href="#method_getChildAt">getChildAt</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method inherited">
+                                <a href="#method_getChildren">getChildren</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method inherited">
                                 <a href="#method_getData">getData</a>
 
                                 
                                 
                             </li>
                         
-                            <li class="index-item method private">
+                            <li class="index-item method private inherited">
                                 <a href="#method_getParent">getParent</a>
 
                                 
                                 
                             </li>
                         
-                            <li class="index-item method protected">
+                            <li class="index-item method protected inherited">
                                 <a href="#method_isEmpty">isEmpty</a>
 
                                 
                                 
                             </li>
                         
-                            <li class="index-item method">
+                            <li class="index-item method protected inherited">
+                                <a href="#method_prepareChild">prepareChild</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method inherited">
                                 <a href="#method_prependTo">prependTo</a>
 
                                 
                                 
                             </li>
                         
-                            <li class="index-item method">
+                            <li class="index-item method inherited">
+                                <a href="#method_removeChild">removeChild</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method inherited">
+                                <a href="#method_removeChildAt">removeChildAt</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method inherited">
+                                <a href="#method_removeChildren">removeChildren</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method inherited">
                                 <a href="#method_setAttribute">setAttribute</a>
 
                                 
                                 
                             </li>
                         
-                            <li class="index-item method">
+                            <li class="index-item method inherited">
                                 <a href="#method_setAttributes">setAttributes</a>
 
                                 
                                 
                             </li>
                         
-                            <li class="index-item method protected">
+                            <li class="index-item method protected inherited">
                                 <a href="#method_setParent">setParent</a>
 
                                 
                                 
                             </li>
                         
-                            <li class="index-item method protected">
+                            <li class="index-item method protected inherited">
+                                <a href="#method_writeClose">writeClose</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method protected inherited">
                                 <a href="#method_writeOpen">writeOpen</a>
 
                                 
@@ -375,30 +419,37 @@ Do not initiate this class directly, use the <code>html()</code> function:</p>
                 <div class="index-section properties">
                     <h3>Properties</h3>
 
-                    <ul class="index-list properties">
+                    <ul class="index-list properties extends">
                         
-                            <li class="index-item property protected">
+                            <li class="index-item property protected inherited">
                                 <a href="#property__attributes">_attributes</a>
 
                                 
                                 
                             </li>
                         
-                            <li class="index-item property protected">
+                            <li class="index-item property private inherited">
+                                <a href="#property__children">_children</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property protected inherited">
                                 <a href="#property__parent">_parent</a>
 
                                 
                                 
                             </li>
                         
-                            <li class="index-item property protected">
+                            <li class="index-item property protected inherited">
                                 <a href="#property__tag">_tag</a>
 
                                 
                                 
                             </li>
                         
-                            <li class="index-item property protected">
+                            <li class="index-item property protected inherited">
                                 <a href="#property__validAttrs">_validAttrs</a>
 
                                 
@@ -419,7 +470,7 @@ Do not initiate this class directly, use the <code>html()</code> function:</p>
                 <h2 class="off-left">Methods</h2>
 
                 
-                    <div id="method___get" class="method item">
+                    <div id="method___get" class="method item inherited">
     <h3 class="name"><code>__get</code></h3>
 
     
@@ -453,9 +504,8 @@ Do not initiate this class directly, use the <code>html()</code> function:</p>
     <div class="meta">
         
             
-                
-                <p>
-                
+                <p>Inherited from
+                <a href="../classes/Node.html#method___get">Node</a>:
             
         
         
@@ -504,7 +554,7 @@ Do not initiate this class directly, use the <code>html()</code> function:</p>
 </div>
 
                 
-                    <div id="method___isset" class="method item">
+                    <div id="method___isset" class="method item inherited">
     <h3 class="name"><code>__isset</code></h3>
 
     
@@ -538,9 +588,8 @@ Do not initiate this class directly, use the <code>html()</code> function:</p>
     <div class="meta">
         
             
-                
-                <p>
-                
+                <p>Inherited from
+                <a href="../classes/Node.html#method___isset">Node</a>:
             
         
         
@@ -589,7 +638,7 @@ Do not initiate this class directly, use the <code>html()</code> function:</p>
 </div>
 
                 
-                    <div id="method___set" class="method item">
+                    <div id="method___set" class="method item inherited">
     <h3 class="name"><code>__set</code></h3>
 
     
@@ -629,9 +678,8 @@ Do not initiate this class directly, use the <code>html()</code> function:</p>
     <div class="meta">
         
             
-                
-                <p>
-                
+                <p>Inherited from
+                <a href="../classes/Node.html#method___set">Node</a>:
             
         
         
@@ -723,10 +771,10 @@ Do not initiate this class directly, use the <code>html()</code> function:</p>
 
     <div class="meta">
         
-            
-                
-                <p>
-                
+            <p>Inherited from
+            <a href="../classes/Node.html#method___toString">
+                Node
+            </a>
             
         
         
@@ -765,7 +813,233 @@ Do not initiate this class directly, use the <code>html()</code> function:</p>
 </div>
 
                 
-                    <div id="method_appendTo" class="method item">
+                    <div id="method_addChild" class="method item inherited">
+    <h3 class="name"><code>addChild</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>childNode</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="../classes/NodeContainer.html" class="crosslink">NodeContainer</a></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/NodeContainer.html#method_addChild">NodeContainer</a>:
+            
+        
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Add&#39;s a child to this NodeContainer. The child to add cannot be null.</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">childNode</code>
+                        <span class="type"><a href="../classes/Node.html" class="crosslink">Node</a> | <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a> | <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a> | <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>The child Node to add</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type"><a href="../classes/NodeContainer.html" class="crosslink">NodeContainer</a></span>:
+                    
+                    <p>The instance of this container</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="method_addChildAt" class="method item inherited">
+    <h3 class="name"><code>addChildAt</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>childNode</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>index</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="../classes/NodeContainer.html" class="crosslink">NodeContainer</a></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/NodeContainer.html#method_addChildAt">NodeContainer</a>:
+            
+        
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Add a child at a specific index</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">childNode</code>
+                        <span class="type"><a href="../classes/Node.html" class="crosslink">Node</a> | <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a> | <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a> | <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>The child Node to add</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">index</code>
+                        <span class="type">Int</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>The index to add child at, 0 is top</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type"><a href="../classes/NodeContainer.html" class="crosslink">NodeContainer</a></span>:
+                    
+                    <p>The instance of this container</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="method_appendTo" class="method item inherited">
     <h3 class="name"><code>appendTo</code></h3>
 
     
@@ -803,9 +1077,8 @@ Do not initiate this class directly, use the <code>html()</code> function:</p>
     <div class="meta">
         
             
-                
-                <p>
-                
+                <p>Inherited from
+                <a href="../classes/Node.html#method_appendTo">Node</a>:
             
         
         
@@ -868,7 +1141,7 @@ Do not initiate this class directly, use the <code>html()</code> function:</p>
 </div>
 
                 
-                    <div id="method_getAttribute" class="method item">
+                    <div id="method_getAttribute" class="method item inherited">
     <h3 class="name"><code>getAttribute</code></h3>
 
     
@@ -906,9 +1179,8 @@ Do not initiate this class directly, use the <code>html()</code> function:</p>
     <div class="meta">
         
             
-                
-                <p>
-                
+                <p>Inherited from
+                <a href="../classes/Node.html#method_getAttribute">Node</a>:
             
         
         
@@ -974,7 +1246,180 @@ Exception.</p>
 </div>
 
                 
-                    <div id="method_getData" class="method item">
+                    <div id="method_getChildAt" class="method item inherited">
+    <h3 class="name"><code>getChildAt</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code class="optional">[index=0]</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="../classes/Node.html" class="crosslink">Node</a></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/NodeContainer.html#method_getChildAt">NodeContainer</a>:
+            
+        
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Gets a child of this Node container at given
+index.  If no index is passed in, getChild()
+will return the child at index zero (0).</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[index=0]</code>
+                        <span class="type">Int</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>The index to fetch child Node at</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type"><a href="../classes/Node.html" class="crosslink">Node</a></span>:
+                    
+                    <p>The child Node</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="method_getChildren" class="method item inherited">
+    <h3 class="name"><code>getChildren</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array" class="crosslink external" target="_blank">Array</a></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/NodeContainer.html#method_getChildren">NodeContainer</a>:
+            
+        
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Returns an array of all children attached to this Node container.</p>
+
+    </div>
+
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array" class="crosslink external" target="_blank">Array</a></span>:
+                    
+                    <p>The collection of Node objects</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="method_getData" class="method item inherited">
     <h3 class="name"><code>getData</code></h3>
 
     
@@ -1012,9 +1457,8 @@ Exception.</p>
     <div class="meta">
         
             
-                
-                <p>
-                
+                <p>Inherited from
+                <a href="../classes/Node.html#method_getData">Node</a>:
             
         
         
@@ -1077,7 +1521,7 @@ Exception.</p>
 </div>
 
                 
-                    <div id="method_getParent" class="method item private">
+                    <div id="method_getParent" class="method item private inherited">
     <h3 class="name"><code>getParent</code></h3>
 
     
@@ -1107,9 +1551,8 @@ Exception.</p>
     <div class="meta">
         
             
-                
-                <p>
-                
+                <p>Inherited from
+                <a href="../classes/Node.html#method_getParent">Node</a>:
             
         
         
@@ -1150,7 +1593,7 @@ this function returns null.</p>
 </div>
 
                 
-                    <div id="method_isEmpty" class="method item protected">
+                    <div id="method_isEmpty" class="method item protected inherited">
     <h3 class="name"><code>isEmpty</code></h3>
 
     
@@ -1186,9 +1629,8 @@ this function returns null.</p>
     <div class="meta">
         
             
-                
-                <p>
-                
+                <p>Inherited from
+                <a href="../classes/Node.html#method_isEmpty">Node</a>:
             
         
         
@@ -1251,7 +1693,112 @@ something more robust here.</p>
 </div>
 
                 
-                    <div id="method_prependTo" class="method item">
+                    <div id="method_prepareChild" class="method item protected inherited">
+    <h3 class="name"><code>prepareChild</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>childNode</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="../classes/Node.html" class="crosslink">Node</a></span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag protected">protected</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/NodeContainer.html#method_prepareChild">NodeContainer</a>:
+            
+        
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Before adding a child, we should do some checking for basic types
+and convert it into a more useable Node object.</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">childNode</code>
+                        <span class="type"><a href="../classes/Node.html" class="crosslink">Node</a> | <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a> | <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a> | <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>The child node to add</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type"><a href="../classes/Node.html" class="crosslink">Node</a></span>:
+                    
+                    <p>The child node</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="method_prependTo" class="method item inherited">
     <h3 class="name"><code>prependTo</code></h3>
 
     
@@ -1289,9 +1836,8 @@ something more robust here.</p>
     <div class="meta">
         
             
-                
-                <p>
-                
+                <p>Inherited from
+                <a href="../classes/Node.html#method_prependTo">Node</a>:
             
         
         
@@ -1354,7 +1900,283 @@ something more robust here.</p>
 </div>
 
                 
-                    <div id="method_setAttribute" class="method item">
+                    <div id="method_removeChild" class="method item inherited">
+    <h3 class="name"><code>removeChild</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code class="optional">[childNode=null]</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/NodeContainer.html#method_removeChild">NodeContainer</a>:
+            
+        
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Removes the first instance of child from this.<br>Once the first instance of the child
+is removed, this function will return.  It returns
+true if a child was removed and false if no child
+was removed.</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[childNode=null]</code>
+                        <span class="type"><a href="../classes/Node.html" class="crosslink">Node</a></span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>The node to remove</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>:
+                    
+                    <p>If successfully removed</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="method_removeChildAt" class="method item inherited">
+    <h3 class="name"><code>removeChildAt</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>index</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="../classes/NodeContainer.html" class="crosslink">NodeContainer</a></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/NodeContainer.html#method_removeChildAt">NodeContainer</a>:
+            
+        
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Remove a child as a specific index</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">index</code>
+                        <span class="type">Int</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>The index to remove child at</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type"><a href="../classes/NodeContainer.html" class="crosslink">NodeContainer</a></span>:
+                    
+                    <p>The instance of the node container</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="method_removeChildren" class="method item inherited">
+    <h3 class="name"><code>removeChildren</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="../classes/NodeContainer.html" class="crosslink">NodeContainer</a></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/NodeContainer.html#method_removeChildren">NodeContainer</a>:
+            
+        
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Removes all children attached to this Node container</p>
+
+    </div>
+
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type"><a href="../classes/NodeContainer.html" class="crosslink">NodeContainer</a></span>:
+                    
+                    <p>The instance of the node container</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="method_setAttribute" class="method item inherited">
     <h3 class="name"><code>setAttribute</code></h3>
 
     
@@ -1400,9 +2222,8 @@ something more robust here.</p>
     <div class="meta">
         
             
-                
-                <p>
-                
+                <p>Inherited from
+                <a href="../classes/Node.html#method_setAttribute">Node</a>:
             
         
         
@@ -1490,7 +2311,7 @@ update the value of the existing named attribute.</p>
 </div>
 
                 
-                    <div id="method_setAttributes" class="method item">
+                    <div id="method_setAttributes" class="method item inherited">
     <h3 class="name"><code>setAttributes</code></h3>
 
     
@@ -1528,9 +2349,8 @@ update the value of the existing named attribute.</p>
     <div class="meta">
         
             
-                
-                <p>
-                
+                <p>Inherited from
+                <a href="../classes/Node.html#method_setAttributes">Node</a>:
             
         
         
@@ -1593,7 +2413,7 @@ update the value of the existing named attribute.</p>
 </div>
 
                 
-                    <div id="method_setParent" class="method item protected">
+                    <div id="method_setParent" class="method item protected inherited">
     <h3 class="name"><code>setParent</code></h3>
 
     
@@ -1629,9 +2449,8 @@ update the value of the existing named attribute.</p>
     <div class="meta">
         
             
-                
-                <p>
-                
+                <p>Inherited from
+                <a href="../classes/Node.html#method_setParent">Node</a>:
             
         
         
@@ -1685,7 +2504,77 @@ if the parent node is empty.</p>
 </div>
 
                 
-                    <div id="method_writeOpen" class="method item protected">
+                    <div id="method_writeClose" class="method item protected inherited">
+    <h3 class="name"><code>writeClose</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag protected">protected</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/NodeContainer.html#method_writeClose">NodeContainer</a>:
+            
+        
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Close the writing of this container as HTML</p>
+
+    </div>
+
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>:
+                    
+                    <p>The closing HTML tag element</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="method_writeOpen" class="method item protected inherited">
     <h3 class="name"><code>writeOpen</code></h3>
 
     
@@ -1725,9 +2614,8 @@ if the parent node is empty.</p>
     <div class="meta">
         
             
-                
-                <p>
-                
+                <p>Inherited from
+                <a href="../classes/Node.html#method_writeOpen">Node</a>:
             
         
         
@@ -1799,7 +2687,7 @@ if the parent node is empty.</p>
                 <h2 class="off-left">Properties</h2>
 
                 
-                    <div id="property__attributes" class="property item protected">
+                    <div id="property__attributes" class="property item protected inherited">
     <h3 class="name"><code>_attributes</code></h3>
     <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array" class="crosslink external" target="_blank">Array</a></span>
 
@@ -1816,9 +2704,8 @@ if the parent node is empty.</p>
     <div class="meta">
         
             
-                
-                <p>
-                
+                <p>Inherited from
+                <a href="../classes/Node.html#property__attributes">Node</a>:
             
         
         
@@ -1842,7 +2729,49 @@ if the parent node is empty.</p>
 </div>
 
                 
-                    <div id="property__parent" class="property item protected">
+                    <div id="property__children" class="property item private inherited">
+    <h3 class="name"><code>_children</code></h3>
+    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array" class="crosslink external" target="_blank">Array</a></span>
+
+    
+
+    
+        <span class="flag private">private</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/NodeContainer.html#property__children">NodeContainer</a>:
+            
+        
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>The collection of children nodes</p>
+
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property__parent" class="property item protected inherited">
     <h3 class="name"><code>_parent</code></h3>
     <span class="type"><a href="../classes/NodeContainer.html" class="crosslink">NodeContainer</a></span>
 
@@ -1859,9 +2788,8 @@ if the parent node is empty.</p>
     <div class="meta">
         
             
-                
-                <p>
-                
+                <p>Inherited from
+                <a href="../classes/Node.html#property__parent">Node</a>:
             
         
         
@@ -1885,7 +2813,7 @@ if the parent node is empty.</p>
 </div>
 
                 
-                    <div id="property__tag" class="property item protected">
+                    <div id="property__tag" class="property item protected inherited">
     <h3 class="name"><code>_tag</code></h3>
     <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
 
@@ -1902,9 +2830,8 @@ if the parent node is empty.</p>
     <div class="meta">
         
             
-                
-                <p>
-                
+                <p>Inherited from
+                <a href="../classes/Node.html#property__tag">Node</a>:
             
         
         
@@ -1928,7 +2855,7 @@ if the parent node is empty.</p>
 </div>
 
                 
-                    <div id="property__validAttrs" class="property item protected">
+                    <div id="property__validAttrs" class="property item protected inherited">
     <h3 class="name"><code>_validAttrs</code></h3>
     <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array" class="crosslink external" target="_blank">Array</a></span>
 
@@ -1945,9 +2872,8 @@ if the parent node is empty.</p>
     <div class="meta">
         
             
-                
-                <p>
-                
+                <p>Inherited from
+                <a href="../classes/Node.html#property__validAttrs">Node</a>:
             
         
         
