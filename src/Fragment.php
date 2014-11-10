@@ -9,10 +9,10 @@ namespace Canteen\HTML5
 	*  Represents a set of HTML tags without a wrapper.
 	*  Do not initiate this class directly, use the `html()` function:
 	*
-	*	$div = html('container');
+	*	$div = html('fragment');
 	*
-	*  @class UntaggedContainer
-	*  @extends Node
+	*  @class Fragment
+	*  @extends NodeContainer
 	*  @constructor
 	*  @param {Node|Array} [children=null] The collection of children or single child
 	*/
@@ -35,7 +35,6 @@ namespace Canteen\HTML5
 			{
 				$buffer .= $child->__toString();
 			}
-
 			return $buffer;
 		}
 	}
