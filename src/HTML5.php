@@ -109,6 +109,11 @@ namespace Canteen\HTML5
 		{
 			return new Text($childrenOrAttributes);
 		}
+		// Untagged container
+		else if ($tag == 'fragment')
+		{
+			return new Fragment($childrenOrAttributes);
+		}
 		// Check for task specification
 		else if (isset(Specification::$TAGS[$tag]))
 		{
