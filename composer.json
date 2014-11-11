@@ -16,7 +16,8 @@
         }
 	],
     "autoload": {
-        "psr-4": {"Canteen\\HTML5\\": "src/"}
+        "psr-4": {"Canteen\\HTML5\\": "src/"},
+        "files": ["src/HTML5.php"]
     },
 	"require": {
 		"php": ">=5.3.0"
