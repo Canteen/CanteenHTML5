@@ -83,7 +83,7 @@ namespace Canteen\HTML5
 			{
 				array_unshift($this->_children, $childNode);
 			}
-			else if ($index > $len)
+			else if ($index > (count($this->_children) - 1))
 			{
 				$this->addChild($childNode);
 			}
