@@ -147,6 +147,13 @@ namespace Canteen\HTML5
 				'width'
 			),
 			'i' => array(),
+			'iframe' => array(
+				'src',
+				'srcdoc',
+				'name',
+				'width',
+				'height'
+			),
 			'input' => array(
 				'accept', 
 				'alt', 
